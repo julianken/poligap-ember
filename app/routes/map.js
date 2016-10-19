@@ -13,7 +13,7 @@ export default Ember.Route.extend({
         .on("mousemove", function(d) {
             d3.select(this).style('fill', 'red');
             div.transition()
-                .duration(200)
+                .duration(0)
                 .style("opacity", .9);
             div .html(this.id)
                 .style("left", ((d3.event.pageX) - 30) + "px")
@@ -24,7 +24,7 @@ export default Ember.Route.extend({
         .on("mouseout", function(d) {
           d3.select(this).style('fill', '#ccc');
             div.transition()
-                .duration(200)
+                .duration(0)
                 .style("opacity", 0);
         });
 
