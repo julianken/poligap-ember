@@ -4,19 +4,41 @@ header {
   position: fixed;
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, .5);
-  padding: 20px 50px;
-
+  z-index: 5;
+  background-color: rgba(0,0,0,.6);
+  height: 88px;
+  top: 0;
+  display: table;
+  a {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 10px 32px;
+    text-decoration: none;
+  }
   .logo {
-    display: inline-block;
     h1 {
+      font-family: $helvetica-bold;
       margin: 0;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 1px;
     }
   }
 
   nav {
-    float: right;
+    a {
+      color: #fff;
+    }
+    vertical-align: middle;
+    display: table-cell;
+    text-align: right;
+    padding: 0 14px;
     li {
+      cursor: pointer;
+      color: #fff;
+      font-size: 14px;
+      padding: 0 18px;
+      font-family: $whitney-bold;
       display: inline-block;
       text-transform: uppercase;
     }

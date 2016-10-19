@@ -1,0 +1,39 @@
+.white-background-content {
+  box-sizing: border-box;
+  padding: 114px 0;
+  max-width: 996px;
+  margin: 0 auto;
+  h3 {
+    text-transform: uppercase;
+  }
+  p {
+    font-family: $open-sans;
+  }
+  .network-icon {
+    height: 235px;
+  }
+}
+
+.gray-background-content {
+  background-color: #FAFAFA;
+  padding: 72px 0 49px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  img {
+    width: 88px;
+    padding-bottom: 32px;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  p {
+    font-family: $open-sans;
+    font-size: 17px;
+    line-height: 26px;
+  }
+}
+
+.callouts {
+  text-align: center;
+}

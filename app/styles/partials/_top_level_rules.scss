@@ -2,3 +2,51 @@
 body {
   margin: 0;
 }
+
+h2 {
+  font-family: $whitney-bold;
+  line-height: 54px;
+  font-size: 40px;
+  color: #17181A;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1C242D;
+  font-family: $whitney-bold;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+
+h5 {
+  font-family: $whitney-bold;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+p {
+  font-family: $open-sans;
+  line-height: 1.5;
+  font-size: 19px;
+}
+
+footer {
+  background-color: #FAFAFA;
+}
+
+.blue-button {
+  background-color: #00A7F3;
+  display: table;
+  margin: 0 auto;
+  width: 173px;
+  height: 48px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  p {
+    font-size: 14px;
+    font-family: $whitney-bold !important;
+  }
+}

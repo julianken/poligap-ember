@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="308px" height="222px" viewBox="0 0 308 222" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>connections</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="117.357143" cy="32.56" rx="32.4761905" ry="32.56"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="64.952381" height="65.12" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="70.8571429" cy="144.3" rx="23.6190476" ry="23.68"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47.2380952" height="47.36" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="11.8095238" cy="129.5" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <ellipse id="path-7" cx="106.285714" cy="204.24" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <ellipse id="path-9" cx="182.809524" cy="179.84" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <ellipse id="path-11" cx="259.809524" cy="201.84" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <ellipse id="path-13" cx="259.809524" cy="136.84" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <ellipse id="path-15" cx="295.809524" cy="78.84" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <ellipse id="path-17" cx="35.4285714" cy="210.16" rx="11.8095238" ry="11.84"></ellipse>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6190476" height="23.68" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <ellipse id="path-19" cx="194.619048" cy="115.68" rx="23.6190476" ry="23.68"></ellipse>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47.2380952" height="47.36" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+    </defs>
+    <g id="Poligap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-04-768-@2x" transform="translate(-704.000000, -638.000000)" stroke="#F2F2F2" fill="#F3F3F3">
+            <g id="connections" transform="translate(704.000000, 638.000000)">
+                <use id="Oval-6" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <use id="Oval-6-Copy" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                <use id="Oval-6-Copy-5" mask="url(#mask-6)" stroke-width="2" xlink:href="#path-5"></use>
+                <use id="Oval-6-Copy-7" mask="url(#mask-8)" stroke-width="2" xlink:href="#path-7"></use>
+                <use id="Oval-6-Copy-8" mask="url(#mask-10)" stroke-width="2" xlink:href="#path-9"></use>
+                <use id="Oval-6-Copy-9" mask="url(#mask-12)" stroke-width="2" xlink:href="#path-11"></use>
+                <use id="Oval-6-Copy-10" mask="url(#mask-14)" stroke-width="2" xlink:href="#path-13"></use>
+                <use id="Oval-6-Copy-11" mask="url(#mask-16)" stroke-width="2" xlink:href="#path-15"></use>
+                <use id="Oval-6-Copy-6" mask="url(#mask-18)" stroke-width="2" xlink:href="#path-17"></use>
+                <use id="Oval-6-Copy-2" mask="url(#mask-20)" stroke-width="2" xlink:href="#path-19"></use>
+                <path d="M117.36995,35.52 L61.2619048,166.106687" id="Path-2" stroke-width="4"></path>
+                <path d="M119.571429,35.52 L194.035156,117.660156" id="Path-3" stroke-width="4"></path>
+                <path d="M196,118 L260.527585,137.65825" id="Path-4" stroke-width="4"></path>
+                <path d="M195,116.005133 L297.663079,78" id="Path-5" stroke-width="4"></path>
+                <path d="M195.362762,116 L183,178.786294" id="Path-6" stroke-width="4"></path>
+                <path d="M195,115 L260.440327,202.935127" id="Path-7" stroke-width="4"></path>
+                <path d="M73.0714286,144.3 L104.4999,203.368711" id="Path-8" stroke-width="4"></path>
+                <path d="M72.3163223,143.56 L35.4285714,211.860461" id="Path-9" stroke-width="4"></path>
+                <path d="M70.8781894,144.024591 L12.547619,130.98" id="Path-10" stroke-width="4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

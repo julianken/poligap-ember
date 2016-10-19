@@ -1,0 +1,45 @@
+footer {
+  color: #8A9199;
+}
+
+.quadruplet {
+  padding-top: 42px;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    font-family: $open-sans;
+    font-size: 17px;
+    line-height: 2;
+    cursor: pointer;
+  }
+}
+
+.footer-logo-text {
+  padding: 72px 156px 47px 0;
+}
+
+.footer-social-bar {
+  background: -webkit-linear-gradient(-45deg, rgba(48,35,174, .8), rgba(123,71,132, .8));
+  height: 88px;
+}
+
+.rights {
+  height: 72px;
+  box-sizing: border-box;
+  display: table;
+  text-align: center;
+  width: 100%;
+  p {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    color: #B8C2CC;
+  }
+}
