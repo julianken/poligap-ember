@@ -1,0 +1,30 @@
+.map-container {
+  padding-top: 114px;
+  h2 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  p {
+    text-align: center;
+    padding: 0 88px;
+    margin-bottom: 88px;
+  }
+}
+
+#CA {
+  position: relative;
+}
+
+#CA.land {
+  &:after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "California";
+    height: 20px;
+    width: 20px;
+    background-color: red;
+  }
+}

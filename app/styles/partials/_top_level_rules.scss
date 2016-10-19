@@ -1,6 +1,7 @@
 
 body {
   margin: 0;
+  overflow-y: scroll;
 }
 
 h2 {
@@ -34,6 +35,10 @@ p {
 
 footer {
   background-color: #FAFAFA;
+}
+
+.header-margin {
+  margin-top: 88px;
 }
 
 .blue-button {

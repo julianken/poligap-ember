@@ -1,6 +1,6 @@
 
 header {
-
+  transition: background-color 150ms;
   position: fixed;
   width: 100%;
   box-sizing: border-box;
@@ -9,6 +9,7 @@ header {
   height: 88px;
   top: 0;
   display: table;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .4);
   a {
     vertical-align: middle;
     display: table-cell;
@@ -28,12 +29,16 @@ header {
   nav {
     a {
       color: #fff;
+      display: inline-block;
+      padding: 0;
+
     }
     vertical-align: middle;
     display: table-cell;
     text-align: right;
     padding: 0 14px;
     li {
+      transition: color 150ms;
       cursor: pointer;
       color: #fff;
       font-size: 14px;
@@ -44,4 +49,19 @@ header {
     }
   }
 
+}
+
+header.active-header {
+  background-color: rgba(255, 255, 255, 1);
+  h1 {
+    color: #000;
+  }
+  nav {
+    li {
+      color: #000;
+    }
+    li.search-icon {
+      color: #BABABA;
+    }
+  }
 }
