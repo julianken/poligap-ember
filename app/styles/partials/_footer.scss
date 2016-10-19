@@ -28,6 +28,13 @@ ul {
 .footer-social-bar {
   background: -webkit-linear-gradient(-45deg, rgba(48,35,174, .8), rgba(123,71,132, .8));
   height: 88px;
+  text-align: center;
+  width: 100%;
+  display: table;
+  .footer-social-icons-wrapper {
+    vertical-align: middle;
+    display: table-cell;
+  }
 }
 
 .rights {
