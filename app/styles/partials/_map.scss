@@ -33,6 +33,54 @@ div.tooltip {
   box-sizing: border-box;
   padding: 4px 14px 8px 14px;
   z-index: 10;
+  .republican-dot {
+    &:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: red;
+      position: absolute;
+      left: 0px;
+      top: 6px;
+    }
+  }
+  .democrat-dot {
+    &:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: blue;
+      position: absolute;
+      left: 0px;
+      top: 6px;
+    }
+  }
+  .male-icon {
+    &:before {
+      content: '';
+      width: 8px;
+      height: 15px;
+      background-size: cover;
+      background-image: url(./images/manIcon.svg);
+      position: absolute;
+      left: -1px;
+      top: 0px;
+    }
+  }
+  .female-icon {
+    &:before {
+      content: '';
+      width: 8px;
+      height: 15px;
+      background-size: cover;
+      background-image: url(./images/womanIcon.svg);
+      position: absolute;
+      left: -1px;
+      top: 0px;
+    }
+  }
   .state-tooltip-section {
     margin-bottom: 8px;
   }
@@ -70,15 +118,17 @@ div.tooltip {
     margin: 0 0 4px 0;
     padding: 0;
     font-family: $open-sans;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 12px;
   }
   p {
-    margin: 0;
+    font-weight: 400;
+    margin: 2px 0;
     font-size: 12px;
-    padding: 0;
+    padding: 0 0 0 10px;
+    position: relative;
   }
   hr {
-    margin: 32px 0 10px 0;
+    margin: 38px 0 10px 0;
   }
 }

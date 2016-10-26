@@ -3,7 +3,8 @@ import $ from 'jquery';
 
 
 export default Ember.Route.extend({
-  setupController: function(){
+  render: function(){
+    this._super();
     $(document).ready(function(){
       $('header').removeClass('active-header');
       $('.matched-images').matchHeight();

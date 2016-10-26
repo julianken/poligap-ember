@@ -52,18 +52,22 @@ export default Ember.Component.extend({
             <h3>${state.full_name}</h3>
             <div class="state-tooltip-section">
               <h5>2 Senators</h5>
-              <p class="twin">${state.senate_republican_percentage}% Rep</p><p class="twin">${state.senate_democrat_percentage}% Dem</p>
-              <p class="twin">${state.senate_gender_male_percentage}% M</p> <p class="twin">${state.senate_gender_female_percentage}% F</p>
+              <p class="twin republican-dot">${state.senate_republican_percentage}% Rep</p>
+              <p class="twin democrat-dot">${state.senate_democrat_percentage}% Dem</p>
+              <p class="twin male-icon">${state.senate_gender_male_percentage}% M</p>
+              <p class="twin female-icon">${state.senate_gender_female_percentage}% F</p>
             </div>
               <br><hr>
             <div class="state-tooltip-section">
               <h5>${state.congressional_total} Congressperson(s)</h5>
-              <p class="twin">${state.congressional_republican_percentage}% Rep</p><p class="twin">${state.congressional_democrat_percentage}% Dem</p>
-              <p class="twin">${state.congressional_gender_male_percentage}% M</p><p class="twin">${state.congressional_gender_female_percentage}% F</p>
+              <p class="twin republican-dot">${state.congressional_republican_percentage}% Rep</p>
+              <p class="twin democrat-dot">${state.congressional_democrat_percentage}% Dem</p>
+              <p class="twin male-icon">${state.congressional_gender_male_percentage}% M</p>
+              <p class="twin female-icon">${state.congressional_gender_female_percentage}% F</p>
             </div>
           `)
             .style("left", ((d3.event.pageX) - 100) + "px")
-            .style("top", ((d3.event.pageY) - 200) + "px");
+            .style("top", ((d3.event.pageY) - 220) + "px");
         })
 
         .on("mouseout", function() {
