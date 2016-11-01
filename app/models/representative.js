@@ -6,5 +6,6 @@ export default DS.Model.extend({
   congress_office: DS.attr('string'),
   birthday: DS.attr('date'),
   party: DS.attr('string'),
+  image_url: DS.attr('string'),
   state_id: DS.attr('string')
 });

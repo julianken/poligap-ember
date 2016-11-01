@@ -1,11 +1,25 @@
 {{yield}}
 
-<h3>Senate</h3>
-{{#each senate as |senator|}}
-  <p>{{senator._data.first_name}} {{senator._data.last_name}}</p>
-{{/each}}
+<div class="container">
+  <h2>Senate</h2>
+  {{#each senate as |senator|}}
+    <div class="triplet" style="height: 300px; text-align: center">
+      {{#link-to 'representative.show' senator.id}}
+        <img style="max-width: 100%; max-height: 75%;" src="{{senator._data.image_url}}">
+        <p>{{senator._data.first_name}} {{senator._data.last_name}}</p>
+      {{/link-to}}
+    </div>
+  {{/each}}
+  <div class="clear"></div>
 
-<h3>House</h3>
-{{#each house as |rep|}}
-  <p>{{rep._data.first_name}} {{rep._data.last_name}}</p>
-{{/each}}
+  <h2>House</h2>
+  {{#each house as |rep|}}
+    <div class="triplet" style="height: 300px; text-align: center">
+      {{#link-to 'map'}}
+        <img style="max-width: 100%; max-height: 75%;" src="{{rep._data.image_url}}">
+        <p>{{rep._data.first_name}} {{rep._data.last_name}}</p>
+      {{/link-to}}
+    </div>
+  {{/each}}
+  <div class="clear"></div>
+</div>
