@@ -8,6 +8,9 @@ export default Ember.Route.extend({
       $(document).ready(function(){
         $('header').addClass('active-header');
         $('.matched-images').matchHeight();
+        $(window).scrollTop(0);
       });
+
+
     }
 });

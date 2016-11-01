@@ -5,5 +5,5 @@ export default DS.Model.extend({
   abbreviated_name: DS.attr('string'),
   senate_stats: DS.attr(),
   congress_stats: DS.attr(),
-  representative: DS.hasMany('representative')
+  representative: DS.hasMany('representative'),
 });

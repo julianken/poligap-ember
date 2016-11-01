@@ -1,0 +1,11 @@
+{{yield}}
+
+<h3>Senate</h3>
+{{#each senate as |senator|}}
+  <p>{{senator._data.first_name}} {{senator._data.last_name}}</p>
+{{/each}}
+
+<h3>House</h3>
+{{#each house as |rep|}}
+  <p>{{rep._data.first_name}} {{rep._data.last_name}}</p>
+{{/each}}

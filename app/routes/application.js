@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
-      states: this.store.findAll('state').then(function(state){
-        return state;
+      states: this.store.findAll('state').then(function(states){
+        return states;
       }),
       representatives: this.store.findAll('representative')
     });
