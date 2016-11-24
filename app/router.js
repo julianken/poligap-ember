@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('representative', function() {
     this.route('show', {path: '/:id'});
   });
+  this.route('zip');
 });
 
 export default Router;

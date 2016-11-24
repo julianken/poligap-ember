@@ -10,7 +10,6 @@ export default Ember.Route.extend({
         $('.matched-images').matchHeight();
         $(window).scrollTop(0);
       });
-
-
     }
+    
 });
