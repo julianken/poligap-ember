@@ -12,22 +12,25 @@ export default Ember.Component.extend({
     let states = this.get('states');
     let representatives = this.get('representatives');
     let map = new Object();
+
     states = states.map(function(state, index){
       return map[index] = {
-        abbreviated_name: state.data.abbreviated_name,
+        abbreviatedName: state.data.abbreviated_name,
         representatives: state.data.representatives,
-        full_name: state.data.full_name,
-        senate_democrat_percentage: state.data.senate_stats.party.democrat.percentage,
-        senate_republican_percentage: state.data.senate_stats.party.republican.percentage,
-        senate_gender_male_percentage: state.data.senate_stats.gender.male.percentage,
-        senate_gender_female_percentage: state.data.senate_stats.gender.female.percentage,
+        fullName: state.data.full_name,
+        senateDemocratPercentage: state.data.senateStats.party.democrat.percentage,
+        senateRepublicanPercentage: state.data.senateStats.party.republican.percentage,
+        senateGenderMalePercentage: state.data.senateStats.gender.male.percentage,
+        senateGenderFemalePercentage: state.data.senateStats.gender.female.percentage,
 
-        congressional_total: state.data.congress_stats.total,
-        congressional_democrat_percentage: state.data.congress_stats.party.democrat.percentage,
-        congressional_republican_percentage: state.data.congress_stats.party.republican.percentage,
-        congressional_gender_male_percentage: state.data.congress_stats.gender.male.percentage,
-        congressional_gender_female_percentage: state.data.congress_stats.gender.female.percentage,
+        congressionalTotal: state.data.congressStats.total,
+        congressionalDemocratPercentage: state.data.congressStats.party.democrat.percentage,
+        congressionalRepublicanPercentage: state.data.congressStats.party.republican.percentage,
+        congressionalGenderMalePercentage: state.data.congressStats.gender.male.percentage,
+        congressionalGenderFemalePercentage: state.data.congressStats.gender.female.percentage,
       };
+
+
     });
 
     var tooltip = d3.select("body").append("div")
@@ -38,7 +41,7 @@ export default Ember.Component.extend({
         .on("mousemove", function() {
           let state = states[parseInt(this.id - 1)];
           let stateColor = '';
-          if (state.congressional_republican_percentage > state.congressional_democrat_percentage) {
+          if (state.congressionalRepublicanPercentage > state.congressionalDemocratPercentage) {
             stateColor = '#FC131F';
           } else {
             stateColor = "#1CA7F0";
@@ -52,18 +55,18 @@ export default Ember.Component.extend({
             <h3>${state.full_name}</h3>
             <div class="state-tooltip-section">
               <h5>2 Senators</h5>
-              <p class="twin republican-dot">${state.senate_republican_percentage}% Rep</p>
-              <p class="twin democrat-dot">${state.senate_democrat_percentage}% Dem</p>
-              <p class="twin male-icon">${state.senate_gender_male_percentage}% M</p>
-              <p class="twin female-icon">${state.senate_gender_female_percentage}% F</p>
+              <p class="twin republican-dot">${state.senateRepublicanPercentage}% Rep</p>
+              <p class="twin democrat-dot">${state.senateDemocratPercentage}% Dem</p>
+              <p class="twin male-icon">${state.senateGenderMalePercentage}% M</p>
+              <p class="twin female-icon">${state.senateGenderFemalePercentage}% F</p>
             </div>
               <br><hr>
             <div class="state-tooltip-section">
               <h5>${state.congressional_total} Congressperson(s)</h5>
-              <p class="twin republican-dot">${state.congressional_republican_percentage}% Rep</p>
-              <p class="twin democrat-dot">${state.congressional_democrat_percentage}% Dem</p>
-              <p class="twin male-icon">${state.congressional_gender_male_percentage}% M</p>
-              <p class="twin female-icon">${state.congressional_gender_female_percentage}% F</p>
+              <p class="twin republican-dot">${state.congressionalRepublicanPercentage}% Rep</p>
+              <p class="twin democrat-dot">${state.congressionalDemocratPercentage}% Dem</p>
+              <p class="twin male-icon">${state.congressionalGenderMalePercentage}% M</p>
+              <p class="twin female-icon">${state.congressionalGenderFemalePercentage}% F</p>
             </div>
           `)
             .style("left", ((d3.event.pageX) - 100) + "px")

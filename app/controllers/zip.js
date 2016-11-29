@@ -17,11 +17,11 @@ export default Ember.Controller.extend({
         let selectedState = [];
 
         $.get('/json/states.json', (response, id) => {
-          selectedState = response.filter((response) => {
+          selectedState = response.find((response) => {
             return response.abbreviation === location.state;
           });
         }).then(() => {
-          this.set('stateID', selectedState[0].id);
+          this.set('stateID', selectedState.id);
         });
 
       });

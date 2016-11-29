@@ -1,11 +1,11 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  first_name: DS.attr('string'),
-  last_name: DS.attr('string'),
-  congress_office: DS.attr('string'),
+  firstName: DS.attr('string'),
+  lastName: DS.attr('string'),
+  congressOffice: DS.attr('string'),
   birthday: DS.attr('date'),
   party: DS.attr('string'),
-  image_url: DS.attr('string'),
-  state_id: DS.attr('string')
+  imageUrl: DS.attr('string'),
+  stateId: DS.attr('string')
 });

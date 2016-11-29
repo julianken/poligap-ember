@@ -1,6 +1,7 @@
 
 header {
   transition: background-color 150ms;
+  transition-timing-function: linear;
   position: fixed;
   width: 100%;
   box-sizing: border-box;

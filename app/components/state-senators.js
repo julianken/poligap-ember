@@ -18,10 +18,10 @@ export default Ember.Component.extend({
     let house = [];
 
     reps.forEach(function(item){
-      if (item._data.state_id == state.id) {
-        if (item._data.congress_office == 'sen') {
+      if (item._data.stateId == state.id) {
+        if (item._data.congressOffice == 'sen') {
           senate.push(item);
-        } else if (item._data.congress_office == 'rep') {
+        } else if (item._data.congressOffice == 'rep') {
           house.push(item);
         }
       }
@@ -29,7 +29,7 @@ export default Ember.Component.extend({
 
     this.set('senate', senate);
     this.set('house', house);
-    
+
   }
 
 

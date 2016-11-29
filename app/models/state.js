@@ -1,9 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  full_name: DS.attr('string'),
-  abbreviated_name: DS.attr('string'),
-  senate_stats: DS.attr(),
-  congress_stats: DS.attr(),
+  fullName: DS.attr(),
+  abbreviatedName: DS.attr('string'),
+  senateStats: DS.attr(),
+  congressStats: DS.attr(),
   representative: DS.hasMany('representative'),
 });
