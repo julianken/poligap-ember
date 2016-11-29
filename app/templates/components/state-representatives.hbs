@@ -15,7 +15,7 @@
   <h2>House</h2>
   {{#each house as |rep|}}
     <div class="triplet" style="height: 300px; text-align: center">
-      {{#link-to 'map'}}
+      {{#link-to 'representative.show' rep.id}}
         <img style="max-width: 100%; max-height: 75%;" src="{{rep._data.imageUrl}}">
         <p>{{rep._data.firstName}} {{rep._data.lastName}}</p>
       {{/link-to}}
