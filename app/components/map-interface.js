@@ -15,9 +15,9 @@ export default Ember.Component.extend({
 
     states = states.map(function(state, index){
       return map[index] = {
-        abbreviatedName: state.data.abbreviated_name,
+        abbreviatedName: state.data.abbreviatedName,
         representatives: state.data.representatives,
-        fullName: state.data.full_name,
+        fullName: state.data.fullName,
         senateDemocratPercentage: state.data.senateStats.party.democrat.percentage,
         senateRepublicanPercentage: state.data.senateStats.party.republican.percentage,
         senateGenderMalePercentage: state.data.senateStats.gender.male.percentage,
@@ -52,7 +52,7 @@ export default Ember.Component.extend({
             .style("opacity", 1);
 
           tooltip.html(`
-            <h3>${state.full_name}</h3>
+            <h3>${state.fullName}</h3>
             <div class="state-tooltip-section">
               <h5>2 Senators</h5>
               <p class="twin republican-dot">${state.senateRepublicanPercentage}% Rep</p>
