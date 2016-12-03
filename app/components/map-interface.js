@@ -62,7 +62,7 @@ export default Ember.Component.extend({
             </div>
               <br><hr>
             <div class="state-tooltip-section">
-              <h5>${state.congressional_total} Congressperson(s)</h5>
+              <h5>${state.congressionalTotal} Congressperson(s)</h5>
               <p class="twin republican-dot">${state.congressionalRepublicanPercentage}% Rep</p>
               <p class="twin democrat-dot">${state.congressionalDemocratPercentage}% Dem</p>
               <p class="twin male-icon">${state.congressionalGenderMalePercentage}% M</p>
