@@ -1,12 +1,99 @@
 {{outlet}}
 
-<div style="margin-top: 88px;">
+<div class="representative-detail">
+
+  <div
+    class="representative-circle-profile"
+    style="background-image: url({{model.imageUrl}})">
+    <div class="party-letter {{model.partyLetter}}">{{model.partyLetter}}</div>
+  </div>
+
+
   <p>{{model.firstName}} {{model.lastName}}</p>
-  <img src="{{model.imageUrl}}">
+
+  <h4>GENERAL</h4>
+
   <ul>
-    <li>Cash on Hand: {{model.cashOnHand}}</li>
-    <li>Cash Spent: {{model.cashSpent}}</li>
-    <li>Cash Debt: {{model.cashDebt}}</li>
-    <li>Cash Total: {{model.cashTotal}}</li>
+    <li>
+      <p class="twin right-align">Name:</p>
+      <p class="twin left-align">{{model.firstName}} {{model.lastName}}</p>
+    </li>
+    <li>
+      <p class="twin right-align">Party:</p>
+      <p class="twin left-align">{{model.party}}</p>
+    </li>
+    <li>
+      <p class="twin right-align">State:</p>
+      <p class="twin left-align">{{model.state.full_name}}</p>
+    </li>
+    <li>
+      <p class="twin right-align">Cash on Hand:</p>
+      <p class="twin left-align">${{formatNumber model.cashOnHand}}</p>
+    </li>
+    <li>
+      <p class="twin right-align">Debt:</p>
+      <p class="twin left-align">${{formatNumber model.cashDebt}}</p>
+    </li>
+    <li>
+      <p class="twin right-align">Total Donations Recieved:</p>
+      <p class="twin left-align">${{formatNumber model.cashTotal}}</p>
+    </li>
   </ul>
+
+  <h4>TOP DONORS</h4>
+
+  {{model.contributionInformation.cycle}}
+
+  {{#each model.contributionInformation.contributor as |contributor index|}}
+
+    <
+    <li>{{contributor.org_name}} - ${{formatNumber contributor.total}}</li>
+  {{/each}}
+
+  <h4>CONTACT</h4>
+
+  <ul>
+    {{#if model.phoneNumber}}
+    <li>
+      <p class="twin right-align">Phone:</p>
+      <p class="twin left-align">{{model.phoneNumber}}</p>
+      <div class="clear"></div>
+    </li>
+    {{/if}}
+
+    {{#if model.email}}
+    <li>
+      <p class="twin right-align">Email:</p>
+      <p class="twin left-align">{{model.email}}</p>
+      <div class="clear"></div>
+    </li>
+    {{/if}}
+
+    {{#if model.website}}
+    <li>
+      <p class="twin right-align">Website:</p>
+      <p class="twin left-align">{{model.website}}</p>
+      <div class="clear"></div>
+    </li>
+    {{/if}}
+
+    {{#if model.twitterId}}
+    <li>
+      <p class="twin right-align">Twitter:</p>
+      <p class="twin left-align">{{model.twitterId}}</p>
+      <div class="clear"></div>
+    </li>
+    {{/if}}
+
+    {{#if model.facebookId}}
+    <li>
+      <p class="twin right-align">Facebook:</p>
+      <p class="twin left-align">{{model.facebookId}}</p>
+      <div class="clear"></div>
+    </li>
+    {{/if}}
+
+  </ul>
+
+  <div class="clear"></div>
 </div>

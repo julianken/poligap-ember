@@ -10,6 +10,7 @@
   .party-letter {
     position: absolute;
     top: 4px;
+    text-align: center;
     font-size: 30px;
     right: 4px;
     border-radius: 100%;
@@ -43,4 +44,21 @@
 
 .representative-section-title {
   margin-bottom: 44px;
+}
+
+.representative-detail {
+  text-align: center;
+}
+
+.representative-detail {
+  margin-top: 144px;
+  .left-align {
+    text-align: left;
+  }
+  .right-align {
+    text-align: right;
+  }
+  .twin {
+    padding: 0 8px;
+  }
 }

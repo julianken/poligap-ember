@@ -12,5 +12,12 @@ export default DS.Model.extend({
   cashDebt: DS.attr('string'),
   cashTotal: DS.attr('string'),
   imageUrl: DS.attr('string'),
-  stateId: DS.attr('string')
+  stateId: DS.attr('string'),
+  gender: DS.attr('string'),
+  state: DS.attr(),
+  contributionInformation: DS.attr(),
+  twitterId: DS.attr('string'),
+  phoneNumber: DS.attr('string'),
+  youtubeUrl: DS.attr('string'),
+  facebookId: DS.attr('string')
 });
