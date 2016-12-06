@@ -8,87 +8,112 @@
     <div class="party-letter {{model.partyLetter}}">{{model.partyLetter}}</div>
   </div>
 
+  <h2 class="representative-name">{{model.firstName}} {{model.lastName}}</h2>
+  <p class="table-text">{{model.state.full_name}} {{model.prefix}}</p>
 
-  <p>{{model.firstName}} {{model.lastName}}</p>
-
-  <h4>GENERAL</h4>
+  <h5 class="twin right-align table-subtitle">GENERAL</h5>
+  <div class="clear"></div>
 
   <ul>
     <li>
-      <p class="twin right-align">Name:</p>
-      <p class="twin left-align">{{model.firstName}} {{model.lastName}}</p>
+      <p class="twin right-align table-text left-side-table">Name:</p>
+      <p class="twin left-align table-text">{{model.firstName}} {{model.lastName}}</p>
     </li>
     <li>
-      <p class="twin right-align">Party:</p>
-      <p class="twin left-align">{{model.party}}</p>
+      <p class="twin right-align table-text left-side-table">Party:</p>
+      <p class="twin left-align table-text">{{model.party}}</p>
     </li>
     <li>
-      <p class="twin right-align">State:</p>
-      <p class="twin left-align">{{model.state.full_name}}</p>
+      <p class="twin right-align table-text left-side-table">State:</p>
+      <p class="twin left-align table-text">{{model.state.full_name}}</p>
     </li>
     <li>
-      <p class="twin right-align">Cash on Hand:</p>
-      <p class="twin left-align">${{formatNumber model.cashOnHand}}</p>
+      <p class="twin right-align table-text left-side-table">Cash on Hand:</p>
+      <p class="twin left-align table-text cash-on-hand-number">${{formatNumber model.cashOnHand}}</p>
     </li>
     <li>
-      <p class="twin right-align">Debt:</p>
-      <p class="twin left-align">${{formatNumber model.cashDebt}}</p>
+      <p class="twin right-align table-text left-side-table">Debt:</p>
+      <p class="twin left-align table-text debt-number">(${{formatNumber model.cashDebt}})</p>
     </li>
     <li>
-      <p class="twin right-align">Total Donations Recieved:</p>
-      <p class="twin left-align">${{formatNumber model.cashTotal}}</p>
+      <p class="twin right-align table-text left-side-table">Total Donations Recieved:</p>
+      <p class="twin left-align table-text">${{formatNumber model.cashTotal}}</p>
     </li>
   </ul>
 
-  <h4>TOP DONORS</h4>
+  <div class="clear"></div>
 
-  {{model.contributionInformation.cycle}}
+  {{#if model.contributionInformation.cycle}}
+    <h5 class="twin right-align table-subtitle">
+      TOP DONORS - {{model.contributionInformation.cycle}} CYCLE
+    </h5>
+    <div class="clear"></div>
 
-  {{#each model.contributionInformation.contributor as |contributor index|}}
+    <ul>
+      {{#each model.contributionInformation.contributor as |contributor index|}}
+        <li>
+          <p class="twin right-align table-text left-side-table">{{contributor.org_name}}</p>
+          <p class="twin left-align table-text">${{formatNumber contributor.total}}</p>
+        </li>
+      {{/each}}
+    </ul>
+    <div class="clear"></div>
+  {{/if}}
 
-    <
-    <li>{{contributor.org_name}} - ${{formatNumber contributor.total}}</li>
-  {{/each}}
-
-  <h4>CONTACT</h4>
+  <h5 class="twin right-align table-subtitle">
+    CONTACT
+  </h5>
+  <div class="clear"></div>
 
   <ul>
     {{#if model.phoneNumber}}
     <li>
-      <p class="twin right-align">Phone:</p>
-      <p class="twin left-align">{{model.phoneNumber}}</p>
+      <p class="twin right-align table-text left-side-table">Phone:</p>
+      <p class="twin left-align table-text">{{model.phoneNumber}}</p>
       <div class="clear"></div>
     </li>
     {{/if}}
 
     {{#if model.email}}
     <li>
-      <p class="twin right-align">Email:</p>
-      <p class="twin left-align">{{model.email}}</p>
+      <p class="twin right-align table-text left-side-table">Email:</p>
+      <a href="mailto:{{model.email}}"><p class="twin left-align table-text">{{model.email}}</p></a>
       <div class="clear"></div>
     </li>
     {{/if}}
 
     {{#if model.website}}
     <li>
-      <p class="twin right-align">Website:</p>
-      <p class="twin left-align">{{model.website}}</p>
+      <p class="twin right-align table-text left-side-table">Website:</p>
+        <a target="_blank" href="{{model.website}}">
+          <p class="twin left-align table-text">
+            {{model.website}}
+          </p>
+        </a>
       <div class="clear"></div>
     </li>
     {{/if}}
 
     {{#if model.twitterId}}
     <li>
-      <p class="twin right-align">Twitter:</p>
-      <p class="twin left-align">{{model.twitterId}}</p>
+      <p class="twin right-align table-text left-side-table">Twitter:</p>
+        <a target="_blank" href="http://www.twitter.com/{{model.twitterId}}">
+          <p class="twin left-align table-text">
+            {{model.twitterId}}
+          </p>
+        </a>
       <div class="clear"></div>
     </li>
     {{/if}}
 
     {{#if model.facebookId}}
     <li>
-      <p class="twin right-align">Facebook:</p>
-      <p class="twin left-align">{{model.facebookId}}</p>
+      <p class="twin right-align table-text left-side-table">Facebook:</p>
+        <a taget="_blank" href="http://www.facebook.com/{{model.facebookId}}">
+          <p class="twin left-align table-text">
+            {{model.facebookId}}
+          </p>
+        </a>
       <div class="clear"></div>
     </li>
     {{/if}}
@@ -96,4 +121,10 @@
   </ul>
 
   <div class="clear"></div>
+</div>
+
+<div class="twitter-representative-icon">
+  <a target="_blank" href="http://www.twitter.com/{{model.twitterId}}">
+    <img src="/img/twitterIconRepresentative.png">
+  </a>
 </div>

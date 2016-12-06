@@ -5,18 +5,18 @@ body {
 }
 
 h2 {
+  font-size: 40px;
   font-family: $whitney-bold;
   line-height: 54px;
-  font-size: 40px;
   color: #17181A;
 }
 
 h3 {
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 16px;
   color: #1C242D;
   font-family: $whitney-bold;
-  font-size: 22px;
   line-height: 33px;
 }
 
@@ -32,6 +32,25 @@ p {
   line-height: 1.5;
   font-size: 19px;
   font-weight: 300;
+}
+
+p.table-text {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+p.left-side-table {
+  color: #8A9199;
+}
+
+h5.table-subtitle {
+  font-size: 16px;
+  margin: 28px 0 8px 0;
+}
+
+.representative-name {
+  margin-bottom: 24px;
 }
 
 footer {

@@ -7,6 +7,9 @@ export default DS.Model.extend({
   partyLetter: DS.attr('string'),
   birthday: DS.attr('date'),
   party: DS.attr('string'),
+  email: DS.attr('string'),
+  prefix: DS.attr('string'),
+  chamber: DS.attr('string'),
   cashSpent: DS.attr('string'),
   cashOnHand: DS.attr('string'),
   cashDebt: DS.attr('string'),
@@ -19,5 +22,6 @@ export default DS.Model.extend({
   twitterId: DS.attr('string'),
   phoneNumber: DS.attr('string'),
   youtubeUrl: DS.attr('string'),
-  facebookId: DS.attr('string')
+  facebookId: DS.attr('string'),
+  website: DS.attr('string')
 });
