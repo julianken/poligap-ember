@@ -2,8 +2,7 @@
 
 <div class="map-container">
   <h2 class="center-align">Select a state to browse representative&nbsp;data.</h2>
-  {{input value=filterValue key-press=(action (mut filterValue))}}
-
+  {{#if filteredList}}
   <ul class="states-list">
     {{#each filteredList as |state|}}
       {{#link-to 'state.show' state.id}}
@@ -11,4 +10,11 @@
       {{/link-to}}
     {{/each}}
   </ul>
+  {{else}}
+    <p>No results</p>
+  {{/if}}
+</div>
+
+<div class="state-list-input">
+  {{input placeholder="Type a state name to filter" value=filterValue key-press=(action (mut filterValue))}}
 </div>

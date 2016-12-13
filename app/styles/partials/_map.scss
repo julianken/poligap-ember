@@ -133,3 +133,31 @@ div.tooltip {
     margin: 38px 0 10px 0;
   }
 }
+
+.states-list {
+  a {
+    color: #00A6F3;
+    text-decoration: none;
+    font-size: 17px;
+  }
+}
+
+.state-list-input {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 8px;
+  background-color: #fff;
+  border-top: solid 2px #B8C2CC;
+  input {
+    width: 85vw;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+
+.state-list-input.active {
+  background: -webkit-linear-gradient(-45deg, rgba(48,35,174, .8), rgba(123,71,132, 1));
+}

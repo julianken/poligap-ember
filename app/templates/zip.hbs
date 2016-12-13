@@ -1,8 +1,21 @@
 {{outlet}}
 
-<div class="container header-margin">
-  {{input value=zip key-press=(action (mut zip))}}
+<div class="container header-margin-extra center-align">
+  <h2>Search representatives by ZIP&nbsp;code.</h2>
   {{#if city}}
-    {{#link-to 'state.show' stateID}}<p>{{city}} {{state}}</p>{{/link-to}}
+    {{#link-to 'state.show' stateID}}<li>{{city}} {{state}}</li>{{/link-to}}
+  {{else}}
+
+  <p>
+    In the next release, you’ll be able to enter your ZIP code here and browse
+    your local government, just like you can at state-level on the
+    {{#link-to 'map'}}Map{{/link-to}}. Check back here soon, but for now your
+    ZIP code will just show you results for the state that it’s located&nbsp;in.
+  </p>
   {{/if}}
+
+  <div class="container header-margin center-align">
+
+  </div>
+  {{input value=zip key-press=(action (mut zip))}}
 </div>
