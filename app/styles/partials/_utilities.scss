@@ -51,6 +51,13 @@ $open-sans: "Open Sans", sans-serif;
   }
 }
 
+.zip-code-blurb {
+  a {
+    color: #00A6F3;
+    text-decoration: none;
+  }
+}
+
 .banner-header {
   position: relative;
   text-align: center;
@@ -90,6 +97,9 @@ $open-sans: "Open Sans", sans-serif;
 
 .header-margin-extra {
   margin-top: 232px;
+  @media screen and (max-width: 575px) {
+    margin-top: 135px;
+  }
 }
 
 .center-align {
