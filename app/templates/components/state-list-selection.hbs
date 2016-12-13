@@ -1,0 +1,14 @@
+{{yield}}
+
+<div class="map-container">
+  <h2 class="center-align">Select a state to browse representative&nbsp;data.</h2>
+  {{input value=filterValue key-press=(action (mut filterValue))}}
+
+  <ul class="states-list">
+    {{#each filteredList as |state|}}
+      {{#link-to 'state.show' state.id}}
+        <li>{{state.data.fullName}}</li>
+      {{/link-to}}
+    {{/each}}
+  </ul>
+</div>
