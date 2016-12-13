@@ -18,21 +18,27 @@ header {
     text-decoration: none;
   }
   .logo {
+    display: inline-block;
     h1 {
-      font-family: $helvetica-bold;
+      display: inline-block;
+      font-family: Helvetica;
       margin: 0;
       color: #fff;
       font-size: 18px;
       letter-spacing: 1px;
+      font-weigth: 600;
+      padding-top: 24px;
     }
   }
 
-  nav {
+  nav.desktop-nav {
+    @media screen and (max-width: 575px) {
+      display: none;
+    }
     a {
       color: #fff;
       display: inline-block;
       padding: 0;
-
     }
     vertical-align: middle;
     display: table-cell;
@@ -49,7 +55,6 @@ header {
       text-transform: uppercase;
     }
   }
-
 }
 
 header.active-header {
@@ -65,4 +70,47 @@ header.active-header {
       color: #BABABA;
     }
   }
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 36px;
+  top: 36px;
+  cursor: pointer;
+  rect {
+    transition: fill 315ms;
+    transition-timing-function: ease-out;
+  }
+  @media screen and (max-width: 575px) {
+    display: block;
+  }
+}
+
+.hamburger.white-hamburger {
+  rect {
+    fill: #000;
+  }
+}
+
+nav.mobile-nav {
+  margin-top: 88px;
+  position: fixed;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.page-content-body {
+  position: relative;
+  z-index: 1;
+  transition: transform 250ms;
+  background-color: #fff;
+}
+
+.page-content-body.active-mobile-nav {
+  transform: translateX(-300px);
 }

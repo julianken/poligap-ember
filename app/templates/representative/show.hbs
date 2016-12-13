@@ -9,10 +9,12 @@
   </div>
 
   <h2 class="representative-name">{{model.firstName}} {{model.lastName}}</h2>
-  <p class="table-text">{{model.state.full_name}} {{model.prefix}}</p>
+  <p class="table-text representative-description">
+    {{model.state.full_name}} {{model.prefix}}
+  </p>
 
   <h5 class="twin right-align table-subtitle">GENERAL</h5>
-  <div class="clear"></div>
+  {{{clear}}}
 
   <ul>
     <li>
@@ -39,9 +41,8 @@
       <p class="twin right-align table-text left-side-table">Total Donations Recieved:</p>
       <p class="twin left-align table-text">${{formatNumber model.cashTotal}}</p>
     </li>
+    {{{clear}}}
   </ul>
-
-  <div class="clear"></div>
 
   {{#if model.contributionInformation.cycle}}
     <h5 class="twin right-align table-subtitle">
@@ -52,25 +53,26 @@
     <ul>
       {{#each model.contributionInformation.contributor as |contributor index|}}
         <li>
-          <p class="twin right-align table-text left-side-table">{{contributor.org_name}}</p>
+          <p class="twin right-align table-text left-side-table">{{contributor.org_name}}:</p>
           <p class="twin left-align table-text">${{formatNumber contributor.total}}</p>
+          {{{clear}}}
         </li>
       {{/each}}
+      {{{clear}}}
     </ul>
-    <div class="clear"></div>
   {{/if}}
 
   <h5 class="twin right-align table-subtitle">
     CONTACT
   </h5>
-  <div class="clear"></div>
+  {{{clear}}}
 
   <ul>
     {{#if model.phoneNumber}}
     <li>
       <p class="twin right-align table-text left-side-table">Phone:</p>
       <p class="twin left-align table-text">{{model.phoneNumber}}</p>
-      <div class="clear"></div>
+      {{{clear}}}
     </li>
     {{/if}}
 
@@ -78,7 +80,7 @@
     <li>
       <p class="twin right-align table-text left-side-table">Email:</p>
       <a href="mailto:{{model.email}}"><p class="twin left-align table-text">{{model.email}}</p></a>
-      <div class="clear"></div>
+      {{{clear}}}
     </li>
     {{/if}}
 
@@ -90,7 +92,7 @@
             {{model.website}}
           </p>
         </a>
-      <div class="clear"></div>
+      {{{clear}}}
     </li>
     {{/if}}
 
@@ -102,29 +104,30 @@
             {{model.twitterId}}
           </p>
         </a>
-      <div class="clear"></div>
+      {{{clear}}}
     </li>
     {{/if}}
 
     {{#if model.facebookId}}
     <li>
       <p class="twin right-align table-text left-side-table">Facebook:</p>
-        <a taget="_blank" href="http://www.facebook.com/{{model.facebookId}}">
+        <a target="_blank" href="http://www.facebook.com/{{model.facebookId}}">
           <p class="twin left-align table-text">
             {{model.facebookId}}
           </p>
         </a>
-      <div class="clear"></div>
+      {{{clear}}}
     </li>
     {{/if}}
-
+    {{{clear}}}
   </ul>
 
-  <div class="clear"></div>
 </div>
 
-<div class="twitter-representative-icon">
+<!-- this button will toggle the twitter feed -->
+
+<!-- <div class="twitter-representative-icon">
   <a target="_blank" href="http://www.twitter.com/{{model.twitterId}}">
     <img src="/img/twitterIconRepresentative.png">
   </a>
-</div>
+</div> -->

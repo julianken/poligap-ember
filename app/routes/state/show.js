@@ -7,6 +7,7 @@ export default Ember.Route.extend({
     $('.tooltip').css('display', 'none');
     $(document).ready(function(){
       $('header').addClass('active-header');
+      $('.hamburger').addClass('white-hamburger');
       $(window).scrollTop(0);
     });
   },

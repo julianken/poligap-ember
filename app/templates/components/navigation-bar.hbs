@@ -1,20 +1,30 @@
 <header>
 
-  {{#link-to 'index'}}
-    <div class="logo">
-      <h1><img src="{{rootURL}}/img/poliLogo.svg">  poligap</h1>
-    </div>
-  {{/link-to}}
 
-  <nav>
+    <div class="logo">
+      {{#link-to 'index'}}
+        <h1><img src="{{rootURL}}/img/poliLogo.svg">  poligap</h1>
+      {{/link-to}}
+    </div>
+
+  <nav class="desktop-nav">
     <ul>
       {{#link-to 'map'}}<li>Map</li>{{/link-to}}
       {{#link-to 'zip'}}<li>Zip</li>{{/link-to}}
       {{#link-to 'about'}}<li>About</li>{{/link-to}}
-      <li class="search-icon">{{fa-icon "search"}}</li>
     </ul>
   </nav>
-
+  <div class="hamburger" onClick={{action "toggleMobileMenu"}}>
+    {{{hamburger}}}
+  </div>
 </header>
+
+<nav class="mobile-nav">
+  <ul>
+    {{#link-to 'map'}}<li>Map</li>{{/link-to}}
+    {{#link-to 'zip'}}<li>Zip</li>{{/link-to}}
+    {{#link-to 'about'}}<li>About</li>{{/link-to}}
+  </ul>
+</nav>
 
 {{yield}}

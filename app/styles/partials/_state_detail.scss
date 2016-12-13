@@ -1,4 +1,15 @@
 
+.banner-title {
+  margin-top: 172px;
+  @media screen and (max-width: 575px) {
+    margin-top: 41px;
+  }
+}
+
+.banner-content.state-information {
+  font-size: 12px;
+}
+
 .representative-circle-profile {
   height: 250px;
   width: 250px;
@@ -68,7 +79,7 @@
 }
 
 .representative-detail {
-  margin: 144px 0 88px 0;
+  margin: 155px 0 88px 0;
   .left-align {
     text-align: left;
   }

@@ -31,6 +31,13 @@ $open-sans: "Open Sans", sans-serif;
   background-size: cover;
   background-position: 0 -90px;
   height: 528px;
+  @media screen and (max-width: 1200px) {
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  @media screen and (max-width: 575px) {
+    height: 272px;
+  }
 }
 
 .mask {
@@ -39,6 +46,9 @@ $open-sans: "Open Sans", sans-serif;
   height: 616px;
   margin-top: -88px;
   background: -webkit-linear-gradient(-45deg, rgba(48,35,174, .8), rgba(123,71,132, .8));
+  @media screen and (max-width: 575px) {
+    height: 361px;
+  }
 }
 
 .banner-header {
@@ -50,6 +60,16 @@ $open-sans: "Open Sans", sans-serif;
   font-size: 40px;
   margin-bottom: 16px;
   z-index: 2;
+  @media screen and (max-width: 991px) {
+    padding: 0 16px;
+    font-size: 32px;
+  }
+  @media screen and (max-width: 575px) {
+    margin-top: 41px;
+  }
+  @media screen and (max-width: 380px) {
+    margin-top: 20px;
+  }
 }
 
 .banner-content {
@@ -63,4 +83,27 @@ $open-sans: "Open Sans", sans-serif;
   font-size: 17px;
   z-index: 2;
   font-family: $open-sans;
+  @media screen and (max-width: 991px) {
+    padding: 0 16px;
+  }
+}
+
+
+
+.no-desktop {
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.no-tablet {
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.no-mobile {
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
 }

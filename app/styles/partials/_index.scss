@@ -12,13 +12,25 @@
   .network-icon {
     height: 235px;
   }
+  @media screen and (max-width: 575px) {
+    padding: 44px 0;
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.mobile-gray-underline {
+  @media screen and (max-width: 575px) {
+    border-bottom: 1px solid #e6e6e6;
+  }
 }
 
 .gray-background-content {
   background-color: #FAFAFA;
   padding: 72px 0 49px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   img {
     width: 88px;
     padding-bottom: 32px;
@@ -31,6 +43,9 @@
     font-family: $open-sans;
     font-size: 17px;
     line-height: 26px;
+  }
+  @media screen and (max-width: 575px) {
+    padding: 16px 0 0 0;
   }
 }
 

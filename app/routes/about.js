@@ -6,7 +6,9 @@ export default Ember.Route.extend({
     this._super();
     $(document).ready(function(){
       $('header').addClass('active-header');
+      $('.hamburger').addClass('white-hamburger');
       $('.matched-images').matchHeight();
+      $('nav.mobile-nav').css('margin-top', 0);
       $(window).scrollTop(0);
     });
   }
