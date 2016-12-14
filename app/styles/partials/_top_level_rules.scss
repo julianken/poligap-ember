@@ -93,3 +93,17 @@ ul {
     font-family: $whitney-bold !important;
   }
 }
+
+.about-container {
+  h2 {
+    padding: 0;
+  }
+  ul {
+    list-style: disc;
+  }
+  a {
+    color: #00A6F3;
+    text-decoration: none;
+  }
+  padding: 0 44px;
+}
