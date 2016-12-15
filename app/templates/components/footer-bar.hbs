@@ -14,17 +14,15 @@
         <div class="twin">
           <h5>LEARN MORE</h5>
           <ul class="footer-link-list">
-            <li>Home</li>
-            <li>Map</li>
-            <li>Zipcode</li>
+            {{#link-to rootURL}}<li>Home</li>{{/link-to}}
+            {{#link-to 'map'}}<li>Map</li>{{/link-to}}
+            {{#link-to 'zip'}}<li>ZIP</li>{{/link-to}}
           </ul>
         </div>
         <div class="twin">
           <h5>GET INVOVLED</h5>
           <ul class="footer-link-list">
-            <li>Information</li>
-            <li>Developers</li>
-            <li>Designers</li>
+            {{#link-to 'about'}}<li>About</li>{{/link-to}}
           </ul>
         </div>
       </div>
