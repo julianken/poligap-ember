@@ -31,20 +31,20 @@
       }
     }
     &:nth-child(3n+2) {
-      padding: 0 44px 44px 0;
-      @media screen and (max-width: 575px) {
+    padding: 0 44px 44px 44px;
+    @media screen and (max-width: 575px) {
         padding: 44px 0;
       }
     }
-    &:nth-child(3n) {
+    &:nth-child(3) {
       padding-right: 0 !important;
       padding-left: 44px;
       @media screen and (max-width: 991px) {
-        padding: 0;
+        padding: 44px 0;
         width: 100%;
       }
       @media screen and (max-width: 575px) {
-        padding: 44px 0;
+        padding: 44px 0 !important;
       }
     }
   }

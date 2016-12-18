@@ -28,12 +28,13 @@
 
 .gray-background-content {
   background-color: #FAFAFA;
-  padding: 72px 0 49px 0;
+  padding: 72px 0 0 0;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
   img {
     width: 88px;
     padding-bottom: 32px;
+    min-height: 85px;
   }
   h3 {
     font-size: 40px;

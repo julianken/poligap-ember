@@ -1,5 +1,10 @@
 footer {
   background-color: #FAFAFA;
+  p {
+    font-size: 17px;
+    line-height: 26px;
+    color: #8A9199;
+  }
   ul {
     a {
       color: #8A9199;
@@ -9,6 +14,7 @@ footer {
   h5 {
     margin-bottom: 0;
     margin-top: 77px;
+    color: #8A9199;
     @media screen and (max-width: 991px) {
       margin-top: 0;
     }

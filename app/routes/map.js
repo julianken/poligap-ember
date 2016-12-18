@@ -12,6 +12,6 @@ export default Ember.Route.extend({
         $('nav.mobile-nav').css('margin-top', '88px');
         $(window).scrollTop(0);
       });
-    }
+    },
 
 });

@@ -3,6 +3,7 @@ header {
   transition: background-color 150ms linear, height 400ms ease;
   position: fixed;
   width: 100%;
+  max-width: 1440px;
   box-sizing: border-box;
   z-index: 5;
   background-color: rgba(0,0,0,.6);
@@ -11,6 +12,9 @@ header {
   display: table;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, .4);
   overflow: hidden;
+  left: 0;
+  right: 0;
+  margin: auto;
   a {
     vertical-align: middle;
     display: table-cell;
