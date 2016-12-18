@@ -26,7 +26,6 @@ div.tooltip {
   padding: 2px;
   font: 12px sans-serif;
   background: #000;
-  border: 1px solid #red;
   color: #17181A;
   background-color: #fff;
   pointer-events: none;
@@ -34,28 +33,35 @@ div.tooltip {
   box-sizing: border-box;
   padding: 4px 14px 8px 14px;
   z-index: 10;
+  hr {
+    color: red;
+    height: 1px;
+    background-color: #E6E6E6;
+    border: 0;
+  }
   .republican-dot {
     &:before {
       content: '';
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 100%;
       background-color: #FC131F;
       position: absolute;
       left: 0px;
-      top: 6px;
+      top:4px;
+      z-index: 100;
     }
   }
   .democrat-dot {
     &:before {
       content: '';
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 100%;
       background-color: #1CA7F0;
       position: absolute;
       left: 0px;
-      top: 6px;
+      top: 4px;
     }
   }
   .male-icon {
