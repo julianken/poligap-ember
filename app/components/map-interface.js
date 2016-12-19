@@ -70,7 +70,8 @@ export default Ember.Component.extend({
             </div>
           `)
             .style("left", ((d3.event.pageX) - 100) + "px")
-            .style("top", ((d3.event.pageY) - 220) + "px");
+            .style("top", ((d3.event.pageY) - 220) + "px")
+            .style("display", "block");
         })
 
         .on("mouseout", function() {

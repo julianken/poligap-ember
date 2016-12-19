@@ -19,9 +19,9 @@
   </div>
   <nav class="mobile-nav">
     <ul>
-      {{#link-to 'map'}}<li>Map</li>{{/link-to}}
-      {{#link-to 'zip'}}<li>Zip</li>{{/link-to}}
-      {{#link-to 'about'}}<li>About</li>{{/link-to}}
+      {{#link-to 'map' invokeAction='toggleMobileMenu'}}<li>Map</li>{{/link-to}}
+      {{#link-to 'zip' invokeAction='toggleMobileMenu'}}<li>Zip</li>{{/link-to}}
+      {{#link-to 'about' invokeAction='toggleMobileMenu'}}<li>About</li>{{/link-to}}
     </ul>
   </nav>
 </header>

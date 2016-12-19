@@ -18,6 +18,7 @@
 
 
 div.tooltip {
+  display: none;
   position: absolute;
   border-radius: 4px;
   text-align: left;
@@ -157,19 +158,21 @@ div.tooltip {
 }
 
 .zip-code-input {
-  padding: 0 16px;
-}
-
-.zip-code-input > input {
-  max-width: 637px;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 100;
-  box-sizing: border-box;
-  padding: 12px 15px;
-  border: 1px solid #B8C2CC;
-  font-family: $open-sans;
-  margin: 40px 0 144px 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 8px;
+  background-color: #fff;
+  border-top: solid 2px #B8C2CC;
+  input {
+    width: 85vw;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 100;
+    font-family: $open-sans;
+  }
 }
 
 .zip-code-blurb {

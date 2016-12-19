@@ -31,6 +31,7 @@ $open-sans: "Open Sans", sans-serif;
   background-size: cover;
   background-position: 0 -90px;
   height: 440px;
+  max-width: 100%;
   @media screen and (max-width: 1200px) {
     background-size: cover;
     background-position: 50% 50%;
@@ -92,13 +93,6 @@ $open-sans: "Open Sans", sans-serif;
   font-family: $open-sans;
   @media screen and (max-width: 991px) {
     padding: 0 16px;
-  }
-}
-
-.header-margin-extra {
-  margin-top: 188px;
-  @media screen and (max-width: 575px) {
-    margin-top: 135px;
   }
 }
 
