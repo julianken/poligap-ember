@@ -24,6 +24,7 @@ $open-sans: "Open Sans", sans-serif;
 .container {
   max-width: 996px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .banner {
@@ -59,6 +60,10 @@ $open-sans: "Open Sans", sans-serif;
   }
 }
 
+.banner {
+  position: relative;
+}
+
 .banner-header {
   position: relative;
   text-align: center;
@@ -78,6 +83,19 @@ $open-sans: "Open Sans", sans-serif;
   @media screen and (max-width: 380px) {
     margin-top: 20px;
   }
+}
+
+
+.photo-credit {
+  font-size: 14px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 5;
+  color: #fff;
+  font-weight: 100;
+  opacity: .5;
+  font-family: $open-sans;
 }
 
 .banner-content {
@@ -116,6 +134,10 @@ $open-sans: "Open Sans", sans-serif;
   @media screen and (max-width: 575px) {
     display: none;
   }
+}
+
+.no-display {
+  display: none;
 }
 
 .loading-spinner {

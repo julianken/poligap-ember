@@ -7,6 +7,12 @@ export default Ember.Controller.extend({
   city: '',
   state: '',
   stateID: '',
+  actions: {
+    stateDetail() {
+      document.activeElement.blur();
+      this.transitionToRoute('state.show', this.stateID);
+    }
+  },
   zipObserver: Ember.observer('zip', function(){
     if (parseInt(this.zip).toString().length === 5) {
       $.get('http://ziptasticapi.com/' + this.zip, (response) => {

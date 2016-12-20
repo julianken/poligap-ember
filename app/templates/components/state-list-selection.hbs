@@ -1,7 +1,7 @@
 {{yield}}
 
-<div class="map-container">
-  <h2 class="center-align">Select a state to browse representative&nbsp;data.</h2>
+<div class="map-container" style="position: relative">
+  <h2 class="center-align state-list-title">Select a state to browse representative&nbsp;data.</h2>
   {{#if filteredList}}
   <ul class="states-list">
     {{#each filteredList as |state|}}
@@ -13,8 +13,7 @@
   {{else}}
     <p>No results</p>
   {{/if}}
-</div>
-
-<div class="state-list-input">
-  {{input placeholder="Type a state name to filter" value=filterValue key-press=(action (mut filterValue))}}
+  <div class="state-list-input">
+    {{input placeholder="Type a state name to filter" value=filterValue key-press=(action (mut filterValue))}}
+  </div>
 </div>

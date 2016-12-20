@@ -154,24 +154,57 @@ div.tooltip {
     color: #00A6F3;
     text-decoration: none;
     font-size: 17px;
+
   }
 }
 
+.fixfixed .zip-code-link {
+  @media screen and (max-width: 575px) {
+    position: absolute;
+    bottom: 88px;
+    text-align: center;
+    width: 100vw;
+    p {
+      font-size: 28px !important;
+
+    }
+  }
+}
+
+.zip-code-wrapper {
+  position: relative;
+}
+
+.zip-code-input > input {
+  max-width: 637px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 100;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  border: 1px solid #B8C2CC;
+  font-family: $open-sans;
+  margin: 40px 0 144px 0;
+}
+
 .zip-code-input {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding-top: 8px;
-  background-color: #fff;
-  border-top: solid 2px #B8C2CC;
-  input {
-    width: 85vw;
-    padding: 10px;
-    font-size: 18px;
-    margin-bottom: 8px;
-    font-weight: 100;
-    font-family: $open-sans;
+  @media screen and (max-width: 575px) {
+    padding-top: 4px;
+    background-color: #fff;
+    border-top: solid 2px #B8C2CC;
+    background: -webkit-linear-gradient(-45deg, rgb(48,35,174), rgb(123,71,132));
+    input {
+      margin-top: 4px;
+      width: 84vw;
+      padding: 10px;
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 100;
+      font-family: $open-sans;
+      transition: 250ms width;
+      border-radius: 3px;
+      border: none;
+    }
   }
 }
 
@@ -179,6 +212,20 @@ div.tooltip {
   max-width: 768px;
   padding: 0 16px;
   margin: 0 auto;
+}
+
+
+@media screen and (max-width: 575px) {
+  .fixfixed .zip-code-blurb, .fixfixed .zip-code-link {
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+.zip-code-wrapper {
+  @media screen and (max-width: 575px) {
+    height: 50vw;
+  }
 }
 
 .state-list-input {
@@ -197,8 +244,20 @@ div.tooltip {
     font-weight: 100;
     font-family: $open-sans;
   }
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
 }
 
-.state-list-input.active {
+.state-list-input {
   background: -webkit-linear-gradient(-45deg, rgba(48,35,174, .8), rgba(123,71,132, 1));
+  input {
+    transition: 250ms width;
+    border: none;
+    border-radius: 3px;
+  }
+}
+
+.fixfixed .state-list-input input {
+  width: 92vw;
 }
