@@ -11,6 +11,8 @@ export default Ember.Route.extend({
     });
   },
   model: function(params){
-    return this.store.peekRecord('representative', params.id);
+    return this.store.findRecord('representative', params.id).then(function(representative){
+      return representative;
+    });
   }
 });

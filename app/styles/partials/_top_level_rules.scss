@@ -47,7 +47,7 @@ p {
   font-family: $open-sans;
   line-height: 1.5;
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p.table-text {
@@ -102,15 +102,20 @@ ul {
 .blue-button {
   display: table;
   margin: 0 auto;
-  width: 173px;
-  height: 48px;
+  max-height: 48px;
   color: #fff;
   text-transform: uppercase;
   border-radius: 3px;
   background-color: #00A7F3;
+  box-sizing: border-box;
   p {
     font-size: 14px;
     font-family: $whitney-bold !important;
+    padding: 16px 24px;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 14px;
   }
 }
 
