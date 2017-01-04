@@ -1,11 +1,13 @@
 footer {
   background-color: #FAFAFA;
+  border-top: 1px solid #e6e6e6;
   p {
     font-size: 17px;
     line-height: 26px;
     color: #8A9199;
   }
   ul {
+    margin-top: 7px;
     a {
       color: #8A9199;
       text-decoration: none;
@@ -20,15 +22,23 @@ footer {
     }
   }
   .twin.twins {
-    padding: 0;
+    padding: 16px 0 0 0;
     @media screen and (max-width: 991px) {
-      padding: 0 44px 44px 44px;
+      padding: 0 40px 13px 40px;
     }
     @media screen and (max-width: 575px) {
-      padding: 0 44px 44px 44px;
+      padding: 0 40px 13px 40px;
     }
     @media screen and (max-width: 380px) {
-      padding: 0 16px 44px 16px;
+      padding: 0 16px 13px 16px;
+    }
+  }
+  .nine-single.twins {
+    @media screen and (max-width: 991px) {
+      margin-left: 8vw;
+    }
+    @media screen and (max-width: 575px) {
+      margin-left: inherit;
     }
   }
 }
@@ -37,24 +47,33 @@ footer {
   padding-top: 42px;
 }
 
-
-
 .footer-logo-text {
-  padding: 72px 156px 47px 0;
+  min-height: 306px;
+  padding: 83px 156px 47px 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  p {
+    max-width: 311px;
+    margin: 4px auto 17px auto;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 72px 88px 40px 88px;
+  }
   @media screen and (max-width: 991px) {
-    padding: 72px 88px 47px 88px;
+    min-height: 1px;
+    padding: 40px 88px 40px 88px;
   }
   @media screen and (max-width: 575px) {
-    padding: 44px;
+    padding: 40px 40px 12px 40px;
   }
   @media screen and (max-width: 380px) {
-    padding: 44px 16px;
+    padding: 40px 16px;
   }
 }
 
 .footer-social-bar {
   background: -webkit-linear-gradient(-45deg, rgba(48,35,174, .8), rgba(123,71,132, .8));
-  height: 88px;
+  height: 72px;
   text-align: center;
   width: 100%;
   display: table;
