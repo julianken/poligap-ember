@@ -37,7 +37,7 @@ export default Ember.Component.extend({
       .attr("class", "tooltip")
       .style("opacity", 0);
 
-      d3.selectAll("path")
+      d3.selectAll(".map-container path")
         .on("mousemove", function() {
           let state = states[parseInt(this.id - 1)];
           let stateColor = '';
@@ -75,7 +75,7 @@ export default Ember.Component.extend({
         })
 
         .on("mouseout", function() {
-          d3.select(this).style('fill', '#ccc');
+          d3.select(this).style('fill', '#e6e6e6');
             tooltip.transition()
                 .duration(0)
                 .style("opacity", 0);

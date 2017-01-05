@@ -1,10 +1,15 @@
 .map-container {
-  padding-top: 92px;
+  padding-top: 68px;
+  padding-bottom: 94px;
   h2 {
     text-align: center;
     margin-bottom: 8px;
+    letter-spacing: -1px;
+    @media screen and (max-width: 991px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
-
   p {
     text-align: center;
     padding: 0 88px;
@@ -15,7 +20,6 @@
 .land {
   cursor: pointer;
 }
-
 
 div.tooltip {
   display: none;
@@ -39,6 +43,7 @@ div.tooltip {
     height: 1px;
     background-color: #E6E6E6;
     border: 0;
+
   }
   .republican-dot {
     &:before {
@@ -137,7 +142,7 @@ div.tooltip {
     position: relative;
   }
   hr {
-    margin: 38px 0 10px 0;
+    margin: 38px 0 14px 0;
   }
 }
 
@@ -146,6 +151,9 @@ div.tooltip {
     color: #00A6F3;
     text-decoration: none;
     font-size: 17px;
+    li {
+      line-height: 56px;
+    }
   }
 }
 
@@ -154,7 +162,6 @@ div.tooltip {
     color: #00A6F3;
     text-decoration: none;
     font-size: 17px;
-
   }
 }
 
@@ -256,6 +263,18 @@ div.tooltip {
     border: none;
     border-radius: 3px;
   }
+}
+
+#HI {
+  transform: translateX(300px);
+  .land {
+    transform-origin: 50% 50%;
+    transform: rotate(-45deg);
+  }
+}
+
+#AK {
+  transform: translateX(100px);
 }
 
 .fixfixed .state-list-input input {

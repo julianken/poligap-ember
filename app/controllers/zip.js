@@ -4,37 +4,32 @@ import $ from 'jquery';
 export default Ember.Controller.extend({
 
   zip: '',
-  city: '',
-  state: '',
+  message: '',
   stateID: '',
+
   actions: {
     stateDetail() {
-      document.activeElement.blur();
-      this.transitionToRoute('state.show', this.stateID);
-    }
-  },
-  zipObserver: Ember.observer('zip', function(){
-    if (parseInt(this.zip).toString().length === 5) {
-      $.get('http://ziptasticapi.com/' + this.zip, (response) => {
-        var location = JSON.parse(response);
-        this.set('city', location.city);
-        this.set('state', location.state);
+      if (parseInt(this.zip).toString().length === 5) {
+        $.get('http://ziptasticapi.com/' + this.zip, (response) => {
+          var location = JSON.parse(response);
 
-        let selectedState = [];
+          if (location.error === "Zip Code not found!") {
+            this.set('message', 'Invalid ZIP code, please try again.');
+          } else {
+            let selectedState = [];
 
-        $.get('/json/states.json', (response, id) => {
-          selectedState = response.find((response) => {
-            return response.abbreviation === location.state;
-          });
-        }).then(() => {
-          this.set('stateID', selectedState.id);
+            $.get('/json/states.json', (response, id) => {
+              selectedState = response.find((response) => {
+                return response.abbreviation === location.state;
+              });
+            }).then(() => {
+              this.set('stateID', selectedState.id);
+              document.activeElement.blur();
+              this.transitionToRoute('state.show', this.stateID);
+            });
+          }
         });
-
-      });
-    } else {
-      this.set('city', '');
-      this.set('state', '');
+      }
     }
-  })
-
+  }
 });

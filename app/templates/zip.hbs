@@ -3,9 +3,9 @@
 <div class="container header-margin-extra center-align">
   <h2>Search representatives by ZIP&nbsp;code.</h2>
   <div class="zip-code-wrapper">
-    {{#if city}}
+    {{#if message}}
       <div class="zip-code-link">
-        {{#link-to 'state.show' stateID}}<p>{{city}}, {{state}}</p>{{/link-to}}
+        <p>{{message}}</p>
       </div>
     {{else}}
 

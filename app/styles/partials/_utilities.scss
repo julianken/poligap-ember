@@ -129,19 +129,19 @@ $open-sans: "Open Sans", sans-serif;
 
 .no-desktop {
   @media screen and (min-width: 992px) {
-    display: none;
+    display: none !important;
   }
 }
 
 .no-tablet {
   @media screen and (min-width: 576px) and (max-width: 991px) {
-    display: none;
+    display: none !important;
   }
 }
 
 .no-mobile {
   @media screen and (max-width: 575px) {
-    display: none;
+    display: none !important;
   }
 }
 
