@@ -1,14 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return Ember.RSVP.hash({
-      states: this.store.findAll('state').then(function(states){
-        return states;
-      }),
-      representatives: this.store.findAll('representative')
-    });
-  },
   render: function(){
     this._super();
     $(document).ready(function(){

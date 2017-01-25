@@ -1,10 +1,10 @@
 {{outlet}}
 
-<div class="banner" style="background-image: url({{rootURL}}/assets/images/states/alabama/capitol.jpg);">
+<div class="banner" style="background-image: url({{rootURL}}/assets/images/states/{{model.state.abbreviatedName}}.jpg);">
   <div class="mask"></div>
   <h1 class="banner-header banner-title">{{model.state.fullName}}</h1>
   <p class="banner-content state-information">
-    {{model.state.stateDescription}}
+    {{{model.state.stateDescription}}}
   </p>
 </div>
 
