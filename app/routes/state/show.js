@@ -13,8 +13,12 @@ export default Ember.Route.extend({
   },
   model(params) {
     return Ember.RSVP.hash({
-      state: this.store.findRecord('state', params.id),
-      reps: this.store.findAll('representative')
+      state: this.store.findRecord('state', params.id).then(function(state){
+        return state;
+      }),
+      reps: this.store.query('representative', {}).then(function(representative){
+        return representative;
+      })
     });
   }
 });

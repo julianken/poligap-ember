@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 
   model() {
     return Ember.RSVP.hash({
-      states: this.store.findAll('state').then(function(states){
+      states: this.store.query('state', {}).then(function(states){
         return states;
       }),
     });
