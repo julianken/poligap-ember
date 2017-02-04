@@ -4,11 +4,18 @@ import $ from 'jquery';
 export default Ember.Route.extend({
 
   model() {
-    return Ember.RSVP.hash({
-      states: this.store.query('state', {}).then(function(states){
-        return states;
-      }),
-    });
+    let cachedCheck = this.store.peekAll('state').content.length;
+    if (cachedCheck === 50) {
+      return Ember.RSVP.hash({
+        states: this.store.peekAll('state')
+      });
+    } else {
+      return Ember.RSVP.hash({
+        states: this.store.query('state', {}).then((states) => {
+          return states;
+        }),
+      });
+    }
   },
 
   render: function(){
@@ -21,6 +28,5 @@ export default Ember.Route.extend({
       $(window).scrollTop(0);
     });
   },
-
 
 });
