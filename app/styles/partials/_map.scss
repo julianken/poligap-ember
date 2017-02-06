@@ -251,18 +251,7 @@ div.tooltip {
 }
 
 
-@media screen and (max-width: 575px) {
-  .fixfixed .zip-code-blurb, .fixfixed .zip-code-link {
-    position: absolute;
-    bottom: 0px;
-  }
-}
 
-.zip-code-wrapper {
-  @media screen and (max-width: 575px) {
-    height: 50vw;
-  }
-}
 
 .state-list-input {
   position: fixed;
