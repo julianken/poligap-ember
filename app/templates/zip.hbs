@@ -19,11 +19,9 @@
     </div>
     {{/if}}
   </div>
-
-  <div class="container center-align">
-
-  </div>
   <div class="zip-code-input">
     {{input action="stateDetail" value=zip placeholder="Search by ZIP code" key-press=(action (mut zip))}}
+    <div class="blue-button" onclick={{action 'stateDetail'}}>SHOW REPS</div>
+    <div class="clear"></div>
   </div>
 </div>

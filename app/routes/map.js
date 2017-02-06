@@ -11,9 +11,7 @@ export default Ember.Route.extend({
       });
     } else {
       return Ember.RSVP.hash({
-        states: this.store.query('state', {}).then((states) => {
-          return states;
-        }),
+        states: this.store.query('state', {}).then(states => { return states }),
       });
     }
   },

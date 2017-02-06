@@ -108,6 +108,7 @@ ul {
   border-radius: 3px;
   background-color: #00A7F3;
   box-sizing: border-box;
+  transition: background-color 200ms ease-in-out;
   p {
     font-size: 14px;
     font-family: $whitney-bold !important;
@@ -116,6 +117,9 @@ ul {
     margin: 0;
     font-weight: 400;
     line-height: 14px;
+  }
+  &:hover {
+    background-color: #00AEFF;
   }
 }
 
@@ -131,4 +135,8 @@ ul {
     text-decoration: none;
   }
   padding: 0 44px;
+}
+
+.about-container {
+  margin-bottom: 80px;
 }

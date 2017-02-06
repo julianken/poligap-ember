@@ -173,7 +173,6 @@ div.tooltip {
     width: 100vw;
     p {
       font-size: 28px !important;
-
     }
   }
 }
@@ -182,27 +181,44 @@ div.tooltip {
   position: relative;
 }
 
-.zip-code-input > input {
-  max-width: 637px;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 100;
-  box-sizing: border-box;
-  padding: 12px 15px;
-  border: 1px solid #B8C2CC;
-  font-family: $open-sans;
-  margin: 40px 0 144px 0;
-}
-
 .zip-code-input {
+  max-width: 637px;
+  margin: 0 auto;
+  padding: 0 16px;
+  > input {
+    width: 66.6%;
+    font-size: 15px;
+    font-weight: 100;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1px solid #B8C2CC;
+    font-family: $open-sans;
+    margin: 40px 0 144px 0;
+    display: inline-block;
+    float: left;
+  }
+  > .blue-button {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    float: left;
+    margin: 40px 0 144px 8px;
+    padding: 14px 15px;
+    font-family: $whitney-bold;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    width: calc(33.3% - 8px);
+    @media screen and (max-width: 575px) {
+      display: none;
+    }
+  }
   @media screen and (max-width: 575px) {
     padding-top: 4px;
     background-color: #fff;
     border-top: solid 2px #B8C2CC;
     background: -webkit-linear-gradient(-45deg, rgb(48,35,174), rgb(123,71,132));
-    input {
+    > input {
       margin-top: 4px;
-      width: 84vw;
       padding: 10px;
       font-size: 18px;
       margin-bottom: 8px;
@@ -211,6 +227,19 @@ div.tooltip {
       transition: 250ms width;
       border-radius: 3px;
       border: none;
+      max-width: 637px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 100;
+      box-sizing: border-box;
+      padding: 12px 15px;
+      border: 1px solid #B8C2CC;
+      font-family: $open-sans;
+      margin: 40px 0 144px 0;
+      @media screen and (max-width: 575px) {
+        width: 100%;
+        margin: 4px auto 8px auto;
+      }
     }
   }
 }

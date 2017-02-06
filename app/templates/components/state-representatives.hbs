@@ -1,14 +1,14 @@
 {{yield}}
 
-<div class="container">
+<div class="container rep-list-container">
   <h2 class="representative-section-title">Senate</h2>
   {{#each senate as |senator|}}
-    <div class="triplet representative-list" style="height: 300px; text-align: center">
+    <div class="triplet representative-list">
       {{#link-to 'representative.show' senator.id}}
         <div
           class="representative-circle-profile"
           style="background-image: url({{senator._data.imageUrl}})">
-          <div class="party-letter {{senator._data.partyLetter}}">{{senator._data.partyLetter}}</div>
+          <div class="party-letter {{senator._data.partyLetter}}"><div>{{senator._data.partyLetter}}</div></div>
         </div>
         <p>{{senator._data.firstName}} {{senator._data.lastName}}</p>
       {{/link-to}}
@@ -18,12 +18,12 @@
 
   <h2 class="representative-section-title">House</h2>
   {{#each house as |rep|}}
-    <div class="triplet representative-list" style="height: 300px; text-align: center">
+    <div class="triplet representative-list">
       {{#link-to 'representative.show' rep.id}}
         <div
           class="representative-circle-profile"
           style="background-image: url({{rep._data.imageUrl}})">
-          <div class="party-letter {{rep._data.partyLetter}}">{{rep._data.partyLetter}}</div>
+          <div class="party-letter {{rep._data.partyLetter}}"><div>{{rep._data.partyLetter}}</div></div>
         </div>
         <p>{{rep._data.firstName}} {{rep._data.lastName}}</p>
       {{/link-to}}

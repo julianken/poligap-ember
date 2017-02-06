@@ -1,6 +1,4 @@
 import Ember from 'ember';
-import $ from 'jquery';
-import DS from 'ember-data';
 
 export default Ember.Component.extend({
 
@@ -9,6 +7,14 @@ export default Ember.Component.extend({
   },
 
   didInsertElement: function() {
+
+    let land = $('.land');
+    let overlay = $('.overlay');
+
+    land.click(function() {
+      overlay.addClass('active');
+    });
+
     let states = this.get('states');
     let representatives = this.get('representatives');
     let map = new Object();
@@ -29,8 +35,6 @@ export default Ember.Component.extend({
         congressionalGenderMalePercentage: state.data.congressStats.gender.male.percentage,
         congressionalGenderFemalePercentage: state.data.congressStats.gender.female.percentage,
       };
-
-
     });
 
     var tooltip = d3.select("body").append("div")
@@ -79,6 +83,12 @@ export default Ember.Component.extend({
             tooltip.transition()
                 .duration(0)
                 .style("opacity", 0);
+        })
+        .on("click", function(){
+          d3.select(this).style('fill', '#e6e6e6');
+          tooltip.transition()
+            .duration(0)
+            .style("opacity", 0);
         });
 
     },
