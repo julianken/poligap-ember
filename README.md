@@ -1,7 +1,23 @@
 # Poligap-ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Welcome! This repository is for the front-end Ember.js application for Poligap.
+
+If you wish to only use the front-end of the application, just clone the repository, `npm install`
+and you'll be ready to go. The adapter is already hooked up to the API, which you are free to connect 
+to.
+
+###Poligap API
+
+If you would like to have both the API and the front-end application running locally, you'll need to 
+clone the Rails repository and follow the directions there to get it up and running. You'll then change 
+the IP address located in `app/adapters/application.js` to wherever you are running the API.
+
+[Poligap API](https://github.com/julianken/poligap)
+
+###Questions?
+
+If you have any questions please feel free to get in contact with me, either on 
+GitHub or at my personal e-mail: julian.kennon.d@gmail.com
 
 ## Prerequisites
 
@@ -13,41 +29,4 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd poligap-ember`
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 

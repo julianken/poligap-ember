@@ -8,10 +8,10 @@ export default Ember.Component.extend({
 
   didInsertElement: function() {
 
-    let land = $('.land');
+    let stateLink = $('.land, .states-list > a');
     let overlay = $('.overlay');
 
-    land.click(function() {
+    stateLink.click(function() {
       overlay.addClass('active');
     });
 

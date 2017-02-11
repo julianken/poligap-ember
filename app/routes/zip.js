@@ -12,5 +12,4 @@ export default Ember.Route.extend({
       $(window).scrollTop(0);
     });
   }
-
 });

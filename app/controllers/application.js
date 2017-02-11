@@ -23,10 +23,6 @@ export default Ember.Controller.extend({
             .children('.hamburger').removeClass('active-hamburger');
         }
       });
-
-
-
-
     });
   },
   currentPathChange: function () {

@@ -12,7 +12,6 @@ export default Ember.Route.extend({
       overlay.css('max-height', 0);
       overlay.attr('class', 'overlay');
     }, 650);
-
     $(document).ready(() => {
       $('header').addClass('active-header');
       $('.hamburger').addClass('white-hamburger');

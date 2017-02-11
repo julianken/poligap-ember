@@ -11,7 +11,8 @@ header {
   top: 0;
   display: table;
   box-shadow: 0 8px 13px -9px rgba(0, 0, 0, .2);
-  overflow: hidden;
+  -moz-overflow: hidden;
+  overflow-y: hidden;
   left: 0;
   right: 0;
   margin: auto;
@@ -142,11 +143,11 @@ nav.mobile-nav {
   background: none;
   height: 110px;
   margin: 0 !important;
-  top: calc(50vh - 110px);
   right: 0;
+  top: -300px;
   bottom: 0;
   left: 0;
-  transition: 250ms opacity;
+  transition: top 250ms;
   ul {
     margin: 0;
   }
@@ -175,26 +176,36 @@ nav.mobile-nav {
 .page-content-body {
   position: relative;
   z-index: 1;
-  transition: transform 250ms;
+  transition: transform 250ms, fill 50ms;
   background-color: #fff;
 }
 
 .hamburger.active-hamburger {
   #top {
-    transform-origin: 0% 0%;
+    transform-origin: 0px 2px;
+    -webkit-transform: rotate(45deg) translate(1.5px, -2px);
     transform: rotate(45deg) translate(1.5px, -2px);
   }
   #middle {
+    -webkit-transform: scale(0);
     transform: scale(0);
+    transform-origin: 8px 8px;
+    fill: #fff;
   }
   #bottom {
-    transform-origin: 0% 0%;
+    transform-origin: 1.5px 12.5px;
+    -webkit-transform: rotate(-45deg) translate(0.2px, 1.5px);
     transform: rotate(-45deg) translate(0.2px, 1.5px);
   }
 }
 
 header.active-mobile-nav {
   height: 100vh;
+  nav.mobile-nav {
+    opacity: 1;
+    display: initial;
+    top: calc(50vh - 110px);
+  }
 }
 
 header.active-mobile-nav {
