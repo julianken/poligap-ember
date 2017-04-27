@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function equality(params/*, hash*/) {
-  if (params[0] == params[1]) {
+  if (params[0] === params[1]) {
     return true;
   }
   return false;

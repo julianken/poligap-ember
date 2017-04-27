@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function clear(params/*, hash*/) {
+export function clear() {
   return '<div class="clear"></div>';
 }
 

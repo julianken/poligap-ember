@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import d3 from 'd3';
+import $ from 'jquery';
 
 export default Ember.Component.extend({
 
@@ -16,8 +18,7 @@ export default Ember.Component.extend({
     });
 
     let states = this.get('states');
-    let representatives = this.get('representatives');
-    let map = new Object();
+    let map = {};
 
     states = states.map(function(state, index){
       return map[index] = {

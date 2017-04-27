@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import DS from 'ember-data';
 
 export default Ember.Component.extend({
 
@@ -18,10 +17,10 @@ export default Ember.Component.extend({
     let house = [];
 
     reps.forEach(function(item){
-      if (item._data.stateId == state.id) {
-        if (item._data.congressOffice == 'sen') {
+      if (item._data.stateId === state.id) {
+        if (item._data.congressOffice === 'sen') {
           senate.push(item);
-        } else if (item._data.congressOffice == 'rep') {
+        } else if (item._data.congressOffice === 'rep') {
           house.push(item);
         }
       }

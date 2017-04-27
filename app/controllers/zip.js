@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
 
             this.set('message', '');
 
-            $.get('/json/states.json', (response, id) => {
+            $.get('/json/states.json', (response) => {
               selectedState = response.find((response) => {
                 return response.abbreviation === location.state;
               });
@@ -34,7 +34,7 @@ export default Ember.Controller.extend({
           }
         });
       } else {
-        this.set('message', 'Please input a United States zipcode with a 5 digit format')
+        this.set('message', 'Please input a United States zipcode with a 5 digit format');
       }
     }
   }
